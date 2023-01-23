@@ -69,7 +69,7 @@ const TextWrapper = styled.div`
     margin-right: 0;
     border: none;
     background-color: ${Color.primaryLightText};
-    width: 110%;
+    width: 100%;
     height: 5px;
   }
 `

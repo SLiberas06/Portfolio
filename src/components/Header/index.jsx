@@ -9,6 +9,8 @@ const HeaderStyled = styled.header`
   flex-direction: column;
   background-color: ${({ theme }) =>
     theme === 'light' ? `${Color.backgroundLight}` : `${Color.backgroundDark}`};
+  border-bottom: ${({ theme }) =>
+    theme === 'light' ? 'none' : '2px solid white'};
   width: 100%;
   height: 30vh;
   align-items: center;

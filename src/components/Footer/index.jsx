@@ -19,6 +19,8 @@ const FooterStyled = styled.footer`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  border-top: ${({ theme }) =>
+    theme === 'light' ? 'none' : '2px solid white'};
 `
 const NightModeButton = styled.button`
   background-color: transparent;
@@ -36,6 +38,12 @@ const Sun = styled(BsFillSunFill)`
     font-size: 55px;
     transition: 200ms;
   }
+  @media (min-width: 1000px) {
+    font-size: 60px;
+    :hover {
+      font-size: 70px;
+    }
+  }
 `
 const Moon = styled(BsFillMoonFill)`
   width: 100px;
@@ -44,6 +52,12 @@ const Moon = styled(BsFillMoonFill)`
   :hover {
     font-size: 45px;
     transition: 200ms;
+  }
+  @media (min-width: 1000px) {
+    font-size: 50px;
+    :hover {
+      font-size: 60px;
+    }
   }
 `
 const ContactWrapper = styled.div`
@@ -55,6 +69,10 @@ const ContactWrapper = styled.div`
   justify-content: space-between;
   color: ${({ theme }) =>
     theme === 'light' ? Color.backgroundDark : Color.primaryLightText};
+  @media (min-width: 1000px) {
+    font-size: 70px;
+    justify-content: space-around;
+  }
 `
 
 function Footer() {
