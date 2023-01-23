@@ -1,25 +1,74 @@
 import styled from 'styled-components'
 import { useTheme } from '../../utils/Hooks'
+import {
+  BsFillSunFill,
+  BsFillMoonFill,
+  BsLinkedin,
+  BsGithub,
+} from 'react-icons/bs'
+import { MdEmail } from 'react-icons/md'
+import { Color } from '../../utils/Atoms'
 
 const FooterStyled = styled.footer`
   width: 100%;
   height: 20vh;
-  background-color: grey;
+  padding: 5vh 0 5vh 0;
+  background-color: ${({ theme }) =>
+    theme === 'light' ? Color.backgroundLight : Color.backgroundDark};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 `
 const NightModeButton = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
-  color: black;
+  transition: 1000s;
+  margin-top: 0;
 `
+
+const Sun = styled(BsFillSunFill)`
+  width: 100px;
+  font-size: 50px;
+  color: ${Color.primaryLight};
+  :hover {
+    font-size: 55px;
+    transition: 200ms;
+  }
+`
+const Moon = styled(BsFillMoonFill)`
+  width: 100px;
+  font-size: 40px;
+  color: ${Color.backgroundLight};
+  :hover {
+    font-size: 45px;
+    transition: 200ms;
+  }
+`
+const ContactWrapper = styled.div`
+  // background-color: blue;
+  display: flex;
+  width: 80%;
+  flex-direction: row;
+  font-size: 50px;
+  justify-content: space-between;
+  color: ${({ theme }) =>
+    theme === 'light' ? Color.backgroundDark : Color.primaryLightText};
+`
+
 function Footer() {
   const { toggleTheme, theme } = useTheme()
   return (
-    <FooterStyled>
+    <FooterStyled theme={theme}>
       <NightModeButton onClick={() => toggleTheme()}>
-        Mode Nuit :{theme === 'light' ? '☀️' : '🌙'}
+        {theme === 'light' ? <Sun /> : <Moon />}
       </NightModeButton>
-      Footer
+      <ContactWrapper theme={theme}>
+        <BsLinkedin />
+        <BsGithub />
+        <MdEmail />
+      </ContactWrapper>
     </FooterStyled>
   )
 }
