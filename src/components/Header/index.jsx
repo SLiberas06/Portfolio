@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { useTheme } from '../../utils/Hooks'
 import { Link } from 'react-router-dom'
 import { Color } from '../../utils/Atoms'
-import pdf from '../../datas/CV_Sabrina_LIBERAS.pdf'
+
 
 const HeaderStyled = styled.header`
   display: flex;
@@ -20,7 +20,7 @@ const HeaderStyled = styled.header`
   }
   h1 {
     font-size: 30px;
-    margin-top: 3vh;
+    margin-top: 5vh;
     color: ${({ theme }) =>
       theme === 'light'
         ? `${Color.primaryLightText}`
@@ -41,7 +41,7 @@ const HeaderStyled = styled.header`
 
 const NavLink = styled(Link)`
   display: flex;
-  margin: 5px 5vw;
+  margin: 3vh 5vw;
   text-decoration: none;
   border-radius: 10px;
   background-color: ${({ theme }) =>
@@ -67,7 +67,6 @@ const NavLink = styled(Link)`
   @media (min-width: 1000px) {
     margin-top: 0;
     font-size: 35px;
-    border-radius: 15px;
   }
 `
 function Header() {
@@ -82,7 +81,7 @@ function Header() {
         <NavLink to="/projets" theme={theme}>
           Projets
         </NavLink>
-        <NavLink theme={theme}>Certifications</NavLink>
+        {/* <NavLink theme={theme}>Certifications</NavLink> */}
       </nav>
     </HeaderStyled>
   )

@@ -5,6 +5,7 @@ import PhotoDark from '../../assets/sl.png'
 import { useTheme } from '../../utils/Hooks'
 import { Color } from '../../utils/Atoms'
 import { FaReact, FaNodeJs } from 'react-icons/fa'
+import Button from '../../components/Button'
 
 const HomeWrapper = styled.main`
   display: flex;
@@ -16,6 +17,7 @@ const HomeWrapper = styled.main`
     flex-wrap: nowrap;
     flex-direction: row-reverse;
     justify-content: center;
+    height: 120vh;
   }
 `
 const AccueilWrapper = styled.div`
@@ -34,7 +36,7 @@ const AccueilWrapper = styled.div`
     align-items: start;
     justify-content: start;
     margin-left: 8vw;
-    height: 80vh;
+    height: 1000px;
   }
 `
 const HomeTitle = styled.h1`
@@ -76,7 +78,7 @@ const HomeTexte = styled.p`
   color: ${({ theme }) =>
     theme === 'light' ? Color.primaryLightText : Color.backgroundLight};
   @media (min-width: 992px) {
-    font-size: 30px;
+    font-size: ${({ theme }) => (theme === 'light' ? `30px` : `25px`)};
     width: 100%;
     text-align: justify;
     height: 70vh;
@@ -91,30 +93,29 @@ const TextTitle = styled.h2`
     theme === 'light' ? Color.primaryLightText : Color.backgroundLight};
   background-color: ${({ theme }) =>
     theme === 'light' ? Color.backgroundLight : Color.primaryLightText};
-  width: 100%;
+
   padding: 3vh 2vw 3vh 2vw;
   border-radius: 15px;
   box-shadow: ${({ theme }) =>
     theme === 'light' ? `none` : `0 0 10px 1px ${Color.backgroundLight}`};
   @media (min-width: 992px) {
-    font-size: 50px;
+    font-size: 40px;
     letter-spacing: 5px;
-    width: 60%;
     padding: 2vh 0 2vh 0;
     background: transparent;
     box-shadow: none;
   }
 `
-
 const TextWrapper = styled.div`
   display: flex;
+  width: 90%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0vh 4vw 2vh 5vw;
   @media (min-width: 992px) {
-    width: 60%;
-    height: 80vh;
+    width: 70%;
+    // height: 100vh;
   }
 `
 const Mark = styled.mark`
@@ -156,6 +157,7 @@ function Accueil() {
           travail ... Je ne vous en dis pas plus, je vous invite à me contacter
           pour en discuter.
         </HomeTexte>
+        <Button />
       </TextWrapper>
     </HomeWrapper>
   )

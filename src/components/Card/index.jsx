@@ -3,6 +3,7 @@ import PropType from 'prop-types'
 import { Color } from '../../utils/Atoms'
 import { useTheme } from '../../utils/Hooks'
 
+
 const CardWrapper = styled.div`
   width: 335px;
   height: 380px;
@@ -14,6 +15,12 @@ const CardWrapper = styled.div`
   background-color: ${({ theme }) =>
     theme === 'light' ? Color.backgroundLight : Color.primaryLightText};
   box-shadow: 0 0 18px 2px rgba(128, 128, 128, 0.3);
+  :hover {
+    box-shadow: ${({ theme }) =>
+      theme === 'light'
+        ? `0 0 15px 1px ${Color.backgroundDark}`
+        : `0 0 15px 1px ${Color.backgroundLight}`};
+  }
   @media (min-width: 992px) {
     width: 435px;
     height: 480px;

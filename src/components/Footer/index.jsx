@@ -13,6 +13,7 @@ const FooterStyled = styled.footer`
   width: 100%;
   height: 20vh;
   padding: 5vh 0 5vh 0;
+  margin-top: 0;
   background-color: ${({ theme }) =>
     theme === 'light' ? Color.backgroundLight : Color.backgroundDark};
   display: flex;
