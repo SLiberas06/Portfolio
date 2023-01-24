@@ -22,6 +22,9 @@ const FooterStyled = styled.footer`
   justify-content: space-between;
   border-top: ${({ theme }) =>
     theme === 'light' ? 'none' : '2px solid white'};
+  @media (min-width: 922px) {
+    height: 25vh;
+  }
 `
 const NightModeButton = styled.button`
   background-color: transparent;
@@ -68,10 +71,13 @@ const ContactWrapper = styled.div`
   flex-direction: row;
   font-size: 50px;
   justify-content: space-between;
-  color: ${({ theme }) =>
-    theme === 'light' ? Color.backgroundDark : Color.primaryLightText};
+  a {
+    text-decoration: none;
+    color: ${({ theme }) =>
+      theme === 'light' ? Color.backgroundDark : Color.primaryLightText};
+  }
   @media (min-width: 1000px) {
-    font-size: 70px;
+    font-size: 60px;
     justify-content: space-around;
   }
 `
@@ -84,9 +90,15 @@ function Footer() {
         {theme === 'light' ? <Sun /> : <Moon />}
       </NightModeButton>
       <ContactWrapper theme={theme}>
-        <BsLinkedin />
-        <BsGithub />
-        <MdEmail />
+        <a href="https://www.linkedin.com/in/sabrina-liberas-836083198">
+          <BsLinkedin />
+        </a>
+        <a href="https://github.com/SLiberas06">
+          <BsGithub />
+        </a>
+        <a href="mailto:sabrina.liberas@gmail.com">
+          <MdEmail />
+        </a>
       </ContactWrapper>
     </FooterStyled>
   )

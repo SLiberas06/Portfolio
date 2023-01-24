@@ -18,6 +18,7 @@ const HomeWrapper = styled.main`
     flex-direction: row-reverse;
     justify-content: center;
     height: 120vh;
+    margin-top: 0vh;
   }
 `
 const AccueilWrapper = styled.div`
@@ -32,11 +33,12 @@ const AccueilWrapper = styled.div`
     no-repeat;
   background-position: top;
   @media (min-width: 992px) {
+    background-position: center;
     width: 60%;
     align-items: start;
     justify-content: start;
     margin-left: 8vw;
-    height: 1000px;
+    height: 120vh;
   }
 `
 const HomeTitle = styled.h1`
@@ -44,7 +46,7 @@ const HomeTitle = styled.h1`
   color: ${Color.primaryLight};
   margin-bottom: 0;
   @media (min-width: 992px) {
-    font-size: 50px;
+    font-size: 40px;
   }
 `
 const HomeSubtitle = styled.h2`
@@ -54,7 +56,7 @@ const HomeSubtitle = styled.h2`
   color: ${({ theme }) =>
     theme === 'light' ? Color.primaryLightText : Color.backgroundLight};
   @media (min-width: 992px) {
-    font-size: 40px;
+    font-size: 30px;
     width: auto;
   }
 `
@@ -78,10 +80,9 @@ const HomeTexte = styled.p`
   color: ${({ theme }) =>
     theme === 'light' ? Color.primaryLightText : Color.backgroundLight};
   @media (min-width: 992px) {
-    font-size: ${({ theme }) => (theme === 'light' ? `30px` : `25px`)};
-    width: 100%;
+    font-size: ${({ theme }) => (theme === 'light' ? `25px` : `20px`)};
+    width: 90%;
     text-align: justify;
-    height: 70vh;
   }
 `
 const TextTitle = styled.h2`
@@ -93,13 +94,12 @@ const TextTitle = styled.h2`
     theme === 'light' ? Color.primaryLightText : Color.backgroundLight};
   background-color: ${({ theme }) =>
     theme === 'light' ? Color.backgroundLight : Color.primaryLightText};
-
   padding: 3vh 2vw 3vh 2vw;
   border-radius: 15px;
   box-shadow: ${({ theme }) =>
     theme === 'light' ? `none` : `0 0 10px 1px ${Color.backgroundLight}`};
   @media (min-width: 992px) {
-    font-size: 40px;
+    font-size: 30px;
     letter-spacing: 5px;
     padding: 2vh 0 2vh 0;
     background: transparent;
@@ -116,6 +116,7 @@ const TextWrapper = styled.div`
   @media (min-width: 992px) {
     width: 70%;
     // height: 100vh;
+    margin-op: 0;
   }
 `
 const Mark = styled.mark`

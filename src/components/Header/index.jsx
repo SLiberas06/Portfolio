@@ -17,6 +17,7 @@ const HeaderStyled = styled.header`
   @media (min-width: 992px) {
     flex-direction: row;
     justify-content: space-between;
+    height: 30vh;
   }
   h1 {
     font-size: 30px;
@@ -27,7 +28,7 @@ const HeaderStyled = styled.header`
         : `${Color.backgroundLight}`};
     @media (min-width: 992px) {
       margin-top: 0;
-      font-size: 50px;
+      font-size: 40px;
       margin-left: 5vw;
     }
   }
@@ -66,7 +67,7 @@ const NavLink = styled(Link)`
   }
   @media (min-width: 1000px) {
     margin-top: 0;
-    font-size: 35px;
+    font-size: 25px;
   }
 `
 function Header() {
