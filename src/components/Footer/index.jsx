@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { keyframes } from 'styled-components'
 import { useTheme } from '../../utils/Hooks'
 import {
   BsFillSunFill,
@@ -8,6 +9,11 @@ import {
 } from 'react-icons/bs'
 import { MdEmail } from 'react-icons/md'
 import { Color } from '../../utils/Atoms'
+
+const AnimationMode = keyframes`
+0% { transform: rotate(45deg)}
+50% { transform: rotate(90deg)};
+100% { transform: rotate(0deg)}; `
 
 const FooterStyled = styled.footer`
   width: 100%;
@@ -38,6 +44,10 @@ const Sun = styled(BsFillSunFill)`
   width: 100px;
   font-size: 50px;
   color: ${Color.primaryLight};
+  animation-name: ${AnimationMode};
+  animation-delay: 2s;
+  animation-duration: 5s;
+  animation-iteration-count: 10;
   :hover {
     font-size: 55px;
     transition: 200ms;
@@ -52,6 +62,9 @@ const Sun = styled(BsFillSunFill)`
 const Moon = styled(BsFillMoonFill)`
   width: 100px;
   font-size: 40px;
+  animation-name: ${AnimationMode};
+  animation-duration: 5s;
+  animation-iteration-count: 10;
   color: ${Color.backgroundLight};
   :hover {
     font-size: 45px;

@@ -20,6 +20,7 @@ const CardWrapper = styled.div`
       theme === 'light'
         ? `0 0 15px 1px ${Color.backgroundDark}`
         : `0 0 15px 1px ${Color.backgroundLight}`};
+    transition: 1000ms;
   }
   @media (min-width: 992px) {
     width: 435px;

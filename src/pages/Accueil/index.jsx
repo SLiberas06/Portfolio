@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { keyframes } from 'styled-components'
 // import Loader from "../../components/Loader"
 import PhotoLight from '../../assets/sabrina.png'
 import PhotoDark from '../../assets/sl.png'
@@ -6,6 +7,15 @@ import { useTheme } from '../../utils/Hooks'
 import { Color } from '../../utils/Atoms'
 import { FaReact, FaNodeJs } from 'react-icons/fa'
 import Button from '../../components/Button'
+
+const CascadeTitle = keyframes`
+ 0% { transform: translateY(-30px); opacity:0%}
+ 100% { transform: translateY(0px); opacity:100%}; 
+`
+const CascadeSubtitle = keyframes`
+0% { transform: translateY(-30px); opacity:25%};
+100% { transform: translateY(0px); opacity:100%}; 
+`
 
 const HomeWrapper = styled.main`
   display: flex;
@@ -45,6 +55,8 @@ const HomeTitle = styled.h1`
   letter-spacing: 2px;
   color: ${Color.primaryLight};
   margin-bottom: 0;
+  animation-name: ${CascadeTitle};
+  animation-duration: 4s;
   @media (min-width: 992px) {
     font-size: 40px;
   }
@@ -52,6 +64,8 @@ const HomeTitle = styled.h1`
 const HomeSubtitle = styled.h2`
   text-align: center;
   margin-top: 0;
+  animation-name: ${CascadeSubtitle};
+  animation-duration: 3s;
   width: ${({ $theme }) => ($theme === 'light' ? `70vw` : `60vw`)};
   color: ${({ theme }) =>
     theme === 'light' ? Color.primaryLightText : Color.backgroundLight};

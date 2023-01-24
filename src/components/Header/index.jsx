@@ -1,8 +1,15 @@
 import styled from 'styled-components'
+import { keyframes } from 'styled-components'
 import { useTheme } from '../../utils/Hooks'
 import { Link } from 'react-router-dom'
 import { Color } from '../../utils/Atoms'
 
+const AnimHeader = keyframes`
+ 0% { transform: translateX(0px); opacity:0%; letter-spacing: 5px}
+ 25% { transform: translateX(0px); opacity:25%; letter-spacing: 10px}
+ 50% { transform: translateX(0px); opacity:50% letter-spacing: 15px}
+ 100% { transform: translateX(0px); opacity:100% letter-spacing: 15px}; 
+`
 
 const HeaderStyled = styled.header`
   display: flex;
@@ -21,6 +28,9 @@ const HeaderStyled = styled.header`
   }
   h1 {
     font-size: 30px;
+    letter-spacing: 15px;
+    animation-name: ${AnimHeader};
+    animation-duration: 3s;
     margin-top: 5vh;
     color: ${({ theme }) =>
       theme === 'light'
