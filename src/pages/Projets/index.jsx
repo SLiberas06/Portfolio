@@ -5,7 +5,14 @@ import Datas from '../../datas/projet.json'
 const StyledDiv = styled.div`
   display: flex;
   flex-direction: column;
+
   justify-content: space-between;
+  @media (min-width: 992px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    width: 80%;
+  }
 `
 
 function Projets() {

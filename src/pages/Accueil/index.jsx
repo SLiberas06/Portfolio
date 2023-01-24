@@ -6,6 +6,18 @@ import { useTheme } from '../../utils/Hooks'
 import { Color } from '../../utils/Atoms'
 import { FaReact, FaNodeJs } from 'react-icons/fa'
 
+const HomeWrapper = styled.main`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @media (min-width: 992px) {
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+`
 const AccueilWrapper = styled.div`
   width: 100%;
   height: 80vh;
@@ -17,11 +29,21 @@ const AccueilWrapper = styled.div`
       theme === 'light' ? `url(${PhotoLight})` : `url(${PhotoDark})`}
     no-repeat;
   background-position: top;
+  @media (min-width: 992px) {
+    width: 60%;
+    align-items: start;
+    justify-content: start;
+    margin-left: 8vw;
+    height: 80vh;
+  }
 `
 const HomeTitle = styled.h1`
   letter-spacing: 2px;
   color: ${Color.primaryLight};
   margin-bottom: 0;
+  @media (min-width: 992px) {
+    font-size: 50px;
+  }
 `
 const HomeSubtitle = styled.h2`
   text-align: center;
@@ -29,6 +51,10 @@ const HomeSubtitle = styled.h2`
   width: ${({ $theme }) => ($theme === 'light' ? `70vw` : `60vw`)};
   color: ${({ theme }) =>
     theme === 'light' ? Color.primaryLightText : Color.backgroundLight};
+  @media (min-width: 992px) {
+    font-size: 40px;
+    width: auto;
+  }
 `
 const React = styled(FaReact)`
   font-size: 40px;
@@ -46,16 +72,38 @@ const NodeJs = styled(FaNodeJs)`
 `
 const HomeTexte = styled.p`
   font-size: 25px;
+  width: 100%;
   color: ${({ theme }) =>
     theme === 'light' ? Color.primaryLightText : Color.backgroundLight};
+  @media (min-width: 992px) {
+    font-size: 30px;
+    width: 100%;
+    text-align: justify;
+    height: 70vh;
+  }
 `
 const TextTitle = styled.h2`
-  font-size: 35px;
+  font-size: 30px;
   text-align: center;
   letter-spacing: 2px;
-  margin: 2vh 0 2vh 0;
+  margin: 1vh;
   color: ${({ theme }) =>
     theme === 'light' ? Color.primaryLightText : Color.backgroundLight};
+  background-color: ${({ theme }) =>
+    theme === 'light' ? Color.backgroundLight : Color.primaryLightText};
+  width: 100%;
+  padding: 3vh 2vw 3vh 2vw;
+  border-radius: 15px;
+  box-shadow: ${({ theme }) =>
+    theme === 'light' ? `none` : `0 0 10px 1px ${Color.backgroundLight}`};
+  @media (min-width: 992px) {
+    font-size: 50px;
+    letter-spacing: 5px;
+    width: 60%;
+    padding: 2vh 0 2vh 0;
+    background: transparent;
+    box-shadow: none;
+  }
 `
 
 const TextWrapper = styled.div`
@@ -64,32 +112,29 @@ const TextWrapper = styled.div`
   align-items: center;
   justify-content: center;
   margin: 0vh 4vw 2vh 5vw;
-  hr {
-    margin-top: 0;
-    margin-right: 0;
-    border: none;
-    background-color: ${Color.primaryLightText};
-    width: 100%;
-    height: 5px;
+  @media (min-width: 992px) {
+    width: 60%;
+    height: 80vh;
   }
 `
 const Mark = styled.mark`
   background-color: ${({ theme }) =>
-    theme === 'light' ? Color.primaryLight : Color.primaryLightText};
+    theme === 'light' ? Color.primaryLight : 'transparent'};
   border-radius: 0 10px 0 10px;
   font-weight: bold;
   padding: 2px;
+  color: ${({ theme }) => (theme === 'light' ? 'black' : Color.primaryLight)};
 `
 function Accueil() {
   const { theme } = useTheme()
   return (
-    <main>
+    <HomeWrapper>
       <AccueilWrapper theme={theme}>
         <HomeTitle>Sabrina LIBERAS</HomeTitle>
         <HomeSubtitle theme={theme}>Developpeuse web Full Stack</HomeSubtitle>
       </AccueilWrapper>
       <TextWrapper>
-        <hr /> <TextTitle theme={theme}> Bienvenue </TextTitle> <hr />
+        <TextTitle theme={theme}> Bienvenue sur mon site </TextTitle>
         <HomeTexte theme={theme}>
           Pour vous parler un peu de <Mark theme={theme}>mes projets</Mark>, je
           suis actuellement en train de réunir plusieurs dev' "toutes catégories
@@ -112,7 +157,7 @@ function Accueil() {
           pour en discuter.
         </HomeTexte>
       </TextWrapper>
-    </main>
+    </HomeWrapper>
   )
 }
 

@@ -14,7 +14,7 @@ const HeaderStyled = styled.header`
   width: 100%;
   height: 30vh;
   align-items: center;
-  @media (min-width: 1000px) {
+  @media (min-width: 992px) {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -25,7 +25,7 @@ const HeaderStyled = styled.header`
       theme === 'light'
         ? `${Color.primaryLightText}`
         : `${Color.backgroundLight}`};
-    @media (min-width: 1000px) {
+    @media (min-width: 992px) {
       margin-top: 0;
       font-size: 50px;
       margin-left: 5vw;
@@ -59,6 +59,10 @@ const NavLink = styled(Link)`
     background-color: ${({ theme }) =>
       theme === 'light' ? `${Color.primaryLight}` : `${Color.primaryLight}`};
     transition: 1000ms;
+    box-shadow: ${({ theme }) =>
+      theme === 'light'
+        ? `0 0 15px  ${Color.backgroundDark}`
+        : `0 0 15px  ${Color.backgroundLight}`};
   }
   @media (min-width: 1000px) {
     margin-top: 0;
