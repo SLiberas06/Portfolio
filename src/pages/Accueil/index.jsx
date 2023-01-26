@@ -75,16 +75,16 @@ const HomeSubtitle = styled.h2`
   }
 `
 const React = styled(FaReact)`
-  font-size: 30px;
+  font-size: 25px;
   border-radius: 50px;
-  padding: 2px;
+  padding: 1px;
   background-color: ${Color.backgroundDark};
   color: #00d8ff;
 `
 const NodeJs = styled(FaNodeJs)`
-  font-size: 30px;
+  font-size: 25px;
   border-radius: 50px;
-  padding: 2px;
+  padding: 1px;
   background-color: ${Color.backgroundDark};
   color: #509941;
 `
@@ -134,8 +134,9 @@ const TextWrapper = styled.div`
   }
 `
 const Mark = styled.mark`
-  background-color: ${({ theme }) =>
-    theme === 'light' ? Color.primaryLight : 'transparent'};
+  background-color: transparent;
+  text-decoration: ${({ theme }) =>
+    theme === 'light' ? `underline overline ${Color.primaryLight}` : 'none'};
   border-radius: 0 10px 0 10px;
   font-weight: bold;
   padding: 2px;
