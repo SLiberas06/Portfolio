@@ -2,6 +2,8 @@ import styled, { keyframes } from 'styled-components'
 import PropType from 'prop-types'
 import { Color } from '../../utils/Atoms'
 import { useTheme } from '../../utils/Hooks'
+import React from 'react'
+import { Fade } from 'react-awesome-reveal'
 
 // const CardAnimation = keyframes`
 // 0%{transform: translateY(100px); opacity:0%}
@@ -20,8 +22,7 @@ const CardWrapper = styled.div`
     theme === 'light' ? Color.backgroundLight : Color.primaryLightText};
   box-shadow: 0 0 18px 2px rgba(128, 128, 128, 0.3);
 
-  // animation-duration: 500ms;
-  // animation-delay: 500ms;
+  transition: 2s;
   :hover {
     box-shadow: ${({ theme }) =>
       theme === 'light'
@@ -58,10 +59,12 @@ const TitleCard = styled.h1`
 function Card({ title, cover, id }) {
   const { theme } = useTheme()
   return (
-    <CardWrapper key={id} theme={theme}>
-      <PictureCard src={cover} alt={title} />
-      <TitleCard theme={theme}>{title}</TitleCard>
-    </CardWrapper>
+    <Fade bottom>
+      <CardWrapper key={id} theme={theme}>
+        <PictureCard src={cover} alt={title} />
+        <TitleCard theme={theme}>{title}</TitleCard>
+      </CardWrapper>
+    </Fade>
   )
 }
 Card.propTypes = {
