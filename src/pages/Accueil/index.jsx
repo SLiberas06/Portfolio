@@ -75,14 +75,14 @@ const HomeSubtitle = styled.h2`
   }
 `
 const React = styled(FaReact)`
-  font-size: 40px;
+  font-size: 30px;
   border-radius: 50px;
   padding: 2px;
   background-color: ${Color.backgroundDark};
   color: #00d8ff;
 `
 const NodeJs = styled(FaNodeJs)`
-  font-size: 40px;
+  font-size: 30px;
   border-radius: 50px;
   padding: 2px;
   background-color: ${Color.backgroundDark};
@@ -164,11 +164,11 @@ function Accueil() {
           <Mark theme={theme}> spécialiser</Mark> en React <React /> côté
           front-end mais aussi en Node
           <NodeJs />
-          côté back-end, et oui je ne peux pas m'empêcher de tout aimé concevoir
-          dans ce merveilleux métier, mon objectif à moyen terme est de
-          developper des <Mark theme={theme}>projets "MERN"</Mark>.<br /> Pour
-          le mot de la fin , je déborde de créativité, je suis une vraie
-          passionnée et je ne manque de rigueur et d'organisation dans mon
+          côté back-end, et oui je ne peux pas m'empêcher de tout aimer
+          concevoir dans ce merveilleux métier, mon objectif à moyen terme est
+          de developper des <Mark theme={theme}>projets "MERN"</Mark>.<br />{' '}
+          Pour le mot de la fin , je déborde de créativité, je suis une vraie
+          passionnée et je ne manque pas de rigueur et d'organisation dans mon
           travail ... Je ne vous en dis pas plus, je vous invite à me contacter
           pour en discuter.
         </HomeTexte>
