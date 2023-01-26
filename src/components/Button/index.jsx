@@ -19,6 +19,7 @@ const ButtonWrapper = styled.div`
       theme === 'light'
         ? `0 0 15px 1px ${Color.backgroundDark}`
         : `0 0 15px 1px ${Color.backgroundLight}`};
+    transition: 1000ms;
   }
   a {
     text-decoration: none;

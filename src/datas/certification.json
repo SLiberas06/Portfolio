@@ -1,52 +1,17 @@
 [
     { 
     "id": "001",
-    "title": "front",
-    "cover": "https://zupimages.net/viewer.php?id=23/04/eunj.png"
-},
-{ 
-    "id": "002",
-    "title": "back",
-    "cover": "https://zupimages.net/viewer.php?id=23/04/51js.png"
-},
-{
-    "id": "003",
-    "title": "git",
-    "cover": "https://zupimages.net/viewer.php?id=23/04/5mhe.png" 
-},
-{ 
-    "id": "004",
-    "title": "html",
-    "cover": "https://zupimages.net/viewer.php?id=23/04/qt4z.png"
-},
-{ 
-    "id": "005",
-    "title": "js",
-    "cover": "https://zupimages.net/viewer.php?id=23/04/9h8k.png"
-},
-{ 
-    "id": "006",
-    "title": "react",
-    "cover": "https://zupimages.net/viewer.php?id=23/04/30op.png"
-},
-{ 
-    "id": "007",
-    "title": "sass",
-    "cover": "https://zupimages.net/viewer.php?id=23/04/17uo.png" 
-}, 
-{ 
-    "id": "008",
-    "title": "seo",
-    "cover": "https://zupimages.net/viewer.php?id=23/04/hg0x.png"
-},
-{ 
-    "id": "009",
-    "title": "veille",
-    "cover": "https://zupimages.net/viewer.php?id=23/04/17sp.png"
-},
-{ 
-    "id": "010",
-    "title": "responsive",
-    "cover": "https://zupimages.net/viewer.php?id=23/04/xxr9.png"   
-}
+    "title": "Certifications",
+    "cover": [
+    "https://zupimages.net/up/23/04/eunj.png",
+    "https://zupimages.net/up/23/04/51js.png",
+    "https://zupimages.net/up/23/04/5mhe.png",
+    "https://zupimages.net/up/23/04/qt4z.png",
+    "https://zupimages.net/up/23/04/9h8k.png",
+    "https://zupimages.net/up/23/04/30op.png",
+    "https://zupimages.net/up/23/04/17uo.png",
+    "https://zupimages.net/up/23/04/hg0x.png",
+    "https://zupimages.net/up/23/04/17sp.png",
+    "https://zupimages.net/up/23/04/xxr9.png"
 ]
+    }]

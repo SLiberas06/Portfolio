@@ -1,9 +1,13 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import PropType from 'prop-types'
 import { Color } from '../../utils/Atoms'
 import { useTheme } from '../../utils/Hooks'
 
-
+// const CardAnimation = keyframes`
+// 0%{transform: translateY(100px); opacity:0%}
+// // 50%{transform: translateY(50px); opacity: 50%}
+// 100%{transform: translateY(0px); opacity: 100%}
+// `
 const CardWrapper = styled.div`
   width: 335px;
   height: 380px;
@@ -15,6 +19,9 @@ const CardWrapper = styled.div`
   background-color: ${({ theme }) =>
     theme === 'light' ? Color.backgroundLight : Color.primaryLightText};
   box-shadow: 0 0 18px 2px rgba(128, 128, 128, 0.3);
+
+  // animation-duration: 500ms;
+  // animation-delay: 500ms;
   :hover {
     box-shadow: ${({ theme }) =>
       theme === 'light'
@@ -22,6 +29,7 @@ const CardWrapper = styled.div`
         : `0 0 15px 1px ${Color.backgroundLight}`};
     transition: 1000ms;
   }
+
   @media (min-width: 992px) {
     width: 435px;
     height: 480px;

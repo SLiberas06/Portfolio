@@ -19,7 +19,7 @@ const HeaderStyled = styled.header`
   border-bottom: ${({ theme }) =>
     theme === 'light' ? 'none' : '2px solid white'};
   width: 100%;
-  height: 30vh;
+  height: 35vh;
   align-items: center;
   @media (min-width: 992px) {
     flex-direction: row;
@@ -52,7 +52,7 @@ const HeaderStyled = styled.header`
 
 const NavLink = styled(Link)`
   display: flex;
-  margin: 3vh 5vw;
+  margin: 2vh 5vw;
   text-decoration: none;
   border-radius: 10px;
   background-color: ${({ theme }) =>
@@ -92,7 +92,9 @@ function Header() {
         <NavLink to="/projets" theme={theme}>
           Projets
         </NavLink>
-        {/* <NavLink theme={theme}>Certifications</NavLink> */}
+        <NavLink to="/certifications" theme={theme}>
+          Certifications
+        </NavLink>
       </nav>
     </HeaderStyled>
   )
