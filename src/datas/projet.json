@@ -69,5 +69,15 @@
     "version": "Desktop - Tablette - Mobile",
     "lien": "http://jmr-expertise.fr/"
   
+},
+{ 
+    "id": "008",
+    "title": "Shiny-agency",
+    "cover": "https://zupimages.net/up/23/04/t0r8.png",
+    "description": "Agence de Freelances",
+    "language": "React",
+    "version": "Desktop - Tablette - Mobile",
+    "lien": "https://shiny-agency-theta.vercel.app/"
+  
 }
 ]
