@@ -1,15 +1,10 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import PropType from 'prop-types'
 import { Color } from '../../utils/Atoms'
 import { useTheme } from '../../utils/Hooks'
 import React from 'react'
 import { Fade } from 'react-awesome-reveal'
 
-// const CardAnimation = keyframes`
-// 0%{transform: translateY(100px); opacity:0%}
-// // 50%{transform: translateY(50px); opacity: 50%}
-// 100%{transform: translateY(0px); opacity: 100%}
-// `
 const CardWrapper = styled.div`
   width: 335px;
   height: 380px;
