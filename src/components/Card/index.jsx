@@ -63,10 +63,10 @@ const WrapperInfo = styled.div`
   height: 200px;
 `
 const SubtitleCard = styled.h3`
-  font-size: 20px;
+  font-size: ${({ theme }) => (theme === 'light' ? '20px' : '17px')};
   margin-top: 0;
   margin-bottom: 0;
-  width: 270px;
+  width: ${({ theme }) => (theme === 'light' ? '270px' : '290px')};
   color: ${({ theme }) =>
     theme === 'light' ? Color.primaryLightText : Color.backgroundLight};
 `
