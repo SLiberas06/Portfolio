@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import cv from '../../datas/cv.pdf'
 import { Color } from '../../utils/Atoms'
 import { useTheme } from '../../utils/Hooks'
-
 const ButtonWrapper = styled.div`
   width: 100%;
   background-color: ${({ theme }) =>
@@ -29,11 +28,12 @@ const ButtonWrapper = styled.div`
       theme === 'light' ? Color.primaryLightText : Color.backgroundLight};
   }
 `
+
 function Button() {
   const { theme } = useTheme()
   return (
     <ButtonWrapper theme={theme}>
-      <a href={cv}>Curriculum Vitae</a>
+      <a href={cv}>Télécharger mon CV</a>
     </ButtonWrapper>
   )
 }

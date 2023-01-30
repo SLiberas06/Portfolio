@@ -11,7 +11,7 @@ const SlideAnimation = keyframes`
 
 const SliderWrapper = styled.div`
   margin: 5vh 0 3vh 0;
-  width: 95vw;
+  width: 90vw;
   height: 40vh;
   background-image: ${(props) => props.image.main};
   background-position: center;
@@ -25,7 +25,7 @@ const SliderWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  transition: 700ms ease-out;
+  transition: 1000ms ease-out;
   animation-name: ${SlideAnimation};
   animation-duration: infinite;
   @media (min-width: 992px) {

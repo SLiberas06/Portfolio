@@ -54,9 +54,7 @@ const React = styled(DiReact)`
   border-radius: 50%;
 `
 const IconWrapper = styled.div`
-  // background-color: red;
   width: 250px;
-  // margin: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
