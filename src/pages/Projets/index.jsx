@@ -1,8 +1,9 @@
 import styled, { keyframes } from 'styled-components'
 import Card from '../../components/Card'
-import Datas from '../../datas/projet.json'
+import { Project } from '../../datas/projet'
 import { Color } from '../../utils/Atoms'
 import { useTheme } from '../../utils/Hooks'
+import { useAsyncValue, useParams } from 'react-router-dom'
 // import Pingouin from '../../components/Penguin'
 import { MdCreateNewFolder } from 'react-icons/md'
 
@@ -49,17 +50,28 @@ const IconProject = styled(MdCreateNewFolder)`
   animation-duration: 0.3s;
   animation-iteration-count: 100;
 `
+
 function Projets() {
   const { theme } = useTheme()
+  const { id } = useParams()
+  const projet = Project.find((project) => project.id === id)
+
   return (
     <StyledDiv>
       <TitleProject theme={theme}>
         Projets <IconProject />
       </TitleProject>
-      {Datas.map((project, index) => (
+      {Project.map((project, index) => (
         <div key={index}>
           <ProjectLink href={project.lien}>
-            <Card id={project.id} title={project.title} cover={project.cover} />
+            <Card
+              id={project.id}
+              title={project.title}
+              cover={project.cover}
+              description={project.description}
+              version={project.version}
+              language={project.language}
+            />
           </ProjectLink>
         </div>
       ))}
