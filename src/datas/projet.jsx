@@ -8,6 +8,7 @@ import {
   DiMongodb,
   DiW3C,
   DiGit,
+  DiAngularSimple,
   DiGoogleAnalytics,
 } from 'react-icons/di'
 import { SiExpress, SiLighthouse } from 'react-icons/si'
@@ -79,6 +80,13 @@ const Express = styled(SiExpress)`
   border-radius: 50%;
   padding: 5px;
 `
+const Angular = styled(DiAngularSimple)`
+  font-size: 35px;
+  color: #dd0330;
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+`
 export const Language = {
   Booki: (
     <IconWrapper>
@@ -112,8 +120,10 @@ export const Language = {
   Hot: (
     <IconWrapper>
       <Js />
+      <Angular />
       <Node />
       <Mongo />
+
       <Express />
     </IconWrapper>
   ),
