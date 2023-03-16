@@ -228,7 +228,7 @@ export const Project = [
     title: 'La Maison Jungle',
     cover: LMJ,
     description: 'E-commerce de plantes',
-    language: Language.Shiny,
+    language: Language.Kasa,
     version: 'Desktop',
     lien: 'https://la-maison-jungle-rho.vercel.app/',
   },
