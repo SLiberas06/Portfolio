@@ -53,8 +53,15 @@ const IconProject = styled(MdCreateNewFolder)`
 
 function Projets() {
   const { theme } = useTheme()
-  const { id } = useParams()
-  const projet = Project.find((project) => project.id === id)
+  const { lien } = useParams()
+  const projet = Project.find((project) => project.lien === lien)
+  // if (!projet) {
+  //   return (
+  //     <Routes>
+  //       <Route path="*" element={<Error />} />
+  //     </Routes>
+  //   )
+  // }
 
   return (
     <StyledDiv>
