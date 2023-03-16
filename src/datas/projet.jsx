@@ -13,6 +13,7 @@ import {
 } from 'react-icons/di'
 import { SiExpress, SiLighthouse } from 'react-icons/si'
 import styled from 'styled-components'
+import LMJ from '../../images/La_maison_jungle.png'
 
 const Sass = styled(DiSass)`
   font-size: 45px;
@@ -221,5 +222,14 @@ export const Project = [
     language: Language.Shiny,
     version: 'Desktop - Tablette - Mobile',
     lien: 'https://shiny-agency-theta.vercel.app/',
+  },
+  {
+    id: '009',
+    title: 'La Maison Jungle',
+    cover: LMJ,
+    description: 'E-commerce de plantes',
+    language: Language.Shiny,
+    version: 'Desktop',
+    lien: 'https://la-maison-jungle-rho.vercel.app/',
   },
 ]
