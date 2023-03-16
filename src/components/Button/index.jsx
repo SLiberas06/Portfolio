@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import cv from '../../datas/cv.pdf'
+import cv from '../../datas/Cv_Sabrina_Liberas.pdf'
 import { Color } from '../../utils/Atoms'
 import { useTheme } from '../../utils/Hooks'
 const ButtonWrapper = styled.div`
