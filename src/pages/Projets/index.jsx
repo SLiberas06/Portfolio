@@ -71,6 +71,7 @@ function Projets() {
               description={project.description}
               version={project.version}
               language={project.language}
+              collection={project.collection}
             />
           </ProjectLink>
         </div>

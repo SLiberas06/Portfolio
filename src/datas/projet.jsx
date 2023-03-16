@@ -231,5 +231,6 @@ export const Project = [
     language: Language.Kasa,
     version: 'Desktop',
     lien: 'https://la-maison-jungle-rho.vercel.app/',
+    collection: 'nouveau projet',
   },
 ]

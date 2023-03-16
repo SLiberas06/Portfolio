@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import PropType from 'prop-types'
 import { Color } from '../../utils/Atoms'
 import { useTheme } from '../../utils/Hooks'
@@ -80,8 +80,53 @@ const VersionProject = styled.h4`
     // margin-top: 4vh;
   }
 `
+const AnimationCollection = keyframes`
+10%, 90% {
+  transform: translate3d(-1px, 0, 0);
+  box-shadow: 2px 1px 20px ${Color.primaryLight};
+ 
+}
 
-function Card({ title, cover, description, version, id, language }) {
+20%, 80% {
+  transform: translate3d(2px, 0, 0);
+}
+
+30%, 50%, 70% {
+  transform: translate3d(-4px, 0, 0);
+}
+}
+
+40%, 60% {
+  transform: translate3d(4px, 0, 0);
+  color:${Color.backgroundLight};
+}`
+
+const CollectionProject = styled.div`
+  color: ${({ theme }) =>
+    theme === 'light' ? Color.backgroundDark : Color.backgroundLight};
+  background-color: ${Color.primaryLight};
+  width: 200px;
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: capitalize;
+  animation: ${AnimationCollection} 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97)
+    both;
+  animation-iteration-count: 50;
+  transform: translate3d(0, 0, 0);
+  animation-delay: 0.5s;
+  animation-duration: 2000ms;
+`
+
+function Card({
+  title,
+  cover,
+  description,
+  version,
+  id,
+  language,
+  collection,
+}) {
   const { theme } = useTheme()
   return (
     <Fade bottom>
@@ -92,6 +137,7 @@ function Card({ title, cover, description, version, id, language }) {
           <SubtitleCard theme={theme}>{description}</SubtitleCard>
           <h3>{language}</h3>
           <VersionProject theme={theme}>{version}</VersionProject>
+          <CollectionProject theme={theme}>{collection}</CollectionProject>
         </WrapperInfo>
       </CardWrapper>
     </Fade>
