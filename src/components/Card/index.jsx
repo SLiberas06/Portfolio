@@ -145,7 +145,6 @@ function Card({
 }
 Card.propTypes = {
   title: PropType.string,
-  cover: PropType.string,
 }
 
 Card.defaultProps = {

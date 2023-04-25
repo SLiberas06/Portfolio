@@ -13,7 +13,7 @@ import {
 } from 'react-icons/di'
 import { SiExpress, SiLighthouse } from 'react-icons/si'
 import styled from 'styled-components'
-import LMJ from '../../images/La_maison_jungle.png'
+import LMJ from '../images/La_maison_jungle.png'
 
 const Sass = styled(DiSass)`
   font-size: 45px;
@@ -150,7 +150,7 @@ export const Language = {
   ),
 }
 
-export const Project = [
+const Project = [
   {
     id: '001',
     title: 'Booki',
@@ -234,3 +234,4 @@ export const Project = [
     collection: 'nouveau projet',
   },
 ]
+export default Project

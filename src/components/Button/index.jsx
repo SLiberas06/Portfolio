@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Cv from '../../datas/CV_SL.pdf'
+import Cv from '../../datas/cv.pdf'
 import { Color } from '../../utils/Atoms'
 import { useTheme } from '../../utils/Hooks'
 const ButtonWrapper = styled.div`
@@ -33,7 +33,7 @@ function Button() {
   const { theme } = useTheme()
   return (
     <ButtonWrapper theme={theme}>
-      <a href={Cv}>CV Indisponible</a>
+      <a href={Cv}>Telecharger mon CV</a>
     </ButtonWrapper>
   )
 }

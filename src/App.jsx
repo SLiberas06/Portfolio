@@ -8,6 +8,7 @@ import Footer from './components/Footer'
 import { Main } from './utils/Atoms'
 import { ThemeProvider } from './utils/Context'
 import GlobalStyle from './utils/GlobalStyle'
+// import{ DataProject} from '../datas/projects'
 
 function App() {
   return (

@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 import Card from '../../components/Card'
-import { Project } from '../../datas/projet'
+import DataProject from '../../datas/projects'
 import { Color } from '../../utils/Atoms'
 import { useTheme } from '../../utils/Hooks'
 import { useAsyncValue, useParams } from 'react-router-dom'
@@ -53,8 +53,8 @@ const IconProject = styled(MdCreateNewFolder)`
 
 function Projets() {
   const { theme } = useTheme()
-  const { lien } = useParams()
-  const projet = Project.find((project) => project.lien === lien)
+  const { link } = useParams()
+  const projet = DataProject.find((project) => project.link === link)
   // if (!projet) {
   //   return (
   //     <Routes>
@@ -68,7 +68,7 @@ function Projets() {
       <TitleProject theme={theme}>
         Projets <IconProject />
       </TitleProject>
-      {Project.map((project, index) => (
+      {DataProject.map((project, index) => (
         <div key={index}>
           <ProjectLink href={project.lien}>
             <Card
