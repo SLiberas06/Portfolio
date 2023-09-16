@@ -91,7 +91,7 @@ const NodeJs = styled(FaNodeJs)`
 const HomeTexte = styled.p`
   font-size: 22px;
   width: 100%;
-  line-height: 35px;
+
   color: ${({ theme }) =>
     theme === 'light' ? Color.primaryLightText : Color.backgroundLight};
   @media (min-width: 992px) {
@@ -149,7 +149,8 @@ function Accueil() {
     <HomeWrapper>
       <AccueilWrapper theme={theme}>
         <HomeTitle>Sabrina LIBERAS</HomeTitle>
-        <HomeSubtitle theme={theme}>Developpeuse web Full Stack</HomeSubtitle>
+        <HomeSubtitle theme={theme}>Developpeuse web Full Stack
+        & SCRUM Master</HomeSubtitle>
       </AccueilWrapper>
       <TextWrapper>
         <TextTitle theme={theme}> Bienvenue sur mon site </TextTitle>
