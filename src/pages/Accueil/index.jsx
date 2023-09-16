@@ -153,25 +153,26 @@ function Accueil() {
       <TextWrapper>
         <TextTitle theme={theme}> Bienvenue sur mon site </TextTitle>
         <HomeTexte theme={theme}>
-          Pour vous parler un peu de <Mark theme={theme}>mes projets</Mark>, je
-          suis actuellement en train de réunir plusieurs dev' "toutes catégories
-          confondues" afin de réaliser quelques projets en{' '}
-          <Mark theme={theme}>"multi-dev"</Mark>..
-          <br /> le but étant d'enrichir mes compétences ainsi que mon
-          expérience de développeuse et de vous partager tous ces projets, ici !{' '}
+          Etant une réelle passionnée par le<Mark theme={theme}>developpement web & mobile</Mark>, 
+          j'ai eu la chance de participer, durant une année entière, au developpement d'un très gros projet d'application mobile 
+          <Mark theme={theme}>IOS & Android </Mark>
+          au sein de la compagnie <Mark theme={theme}>MyHotelMatch</Mark> dont la sortie sur les stores 
+          est prévue très prochainement...
+          <br /> Entourée & accompagnée par de réels pointures au quotidien,
+          cette expérience m'a permise d'enrichir mes compétences ainsi 
+          que mes connaissances en <Mark theme={theme}>développement d'application IOS & Android </Mark>
+          notamment en <Mark theme={theme}>React Native et Typescript</Mark> coté Front-end 
+          mais aussi au developpement <Mark theme={theme}>d'une API sécurisée en Python flaskr</Mark> coté Back-end.
           <br />
-          Alors si vous êtes dev' et interessé(e) pour discuter "projets", je
-          serai ravie de vous compter parmis mes contacts ... Je souhaite me
-          <Mark theme={theme}> spécialiser</Mark> en React <React /> côté
+          En parallèle du developpement de cette application, j'ai passé une formation  <Mark theme={theme}>SCRUM Master</Mark>, 
+          obtenu ma certification & 
+          eu l'occasion d'appliquer mes nouvelles compétences en <Mark theme={theme}>méthodes Agiles</Mark> pour la réalisation de ce projet.
+          Je vous mets à disposition mes projets, mes certification & mon CV.
+            <br />
+          Je suis<Mark theme={theme}> spécialisée</Mark> en ReactJS & React Native <React /> côté
           front-end mais aussi en Node
-          <NodeJs />
-          côté back-end, et oui je ne peux pas m'empêcher de tout aimer
-          concevoir dans ce merveilleux métier, mon objectif à moyen terme est
-          de developper des <Mark theme={theme}>projets "MERN"</Mark>.<br />{' '}
-          Pour le mot de la fin , je déborde de créativité, je suis une vraie
-          passionnée et je ne manque pas de rigueur et d'organisation dans mon
-          travail ... Je ne vous en dis pas plus, je vous invite à me contacter
-          pour en discuter.
+          <NodeJs /> & Python flaskr
+          côté back-end. 
         </HomeTexte>
         <Button />
       </TextWrapper>
