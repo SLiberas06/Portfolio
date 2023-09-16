@@ -91,10 +91,11 @@ const NodeJs = styled(FaNodeJs)`
 const HomeTexte = styled.p`
   font-size: 22px;
   width: 100%;
+  line-height: 35px;
   color: ${({ theme }) =>
     theme === 'light' ? Color.primaryLightText : Color.backgroundLight};
   @media (min-width: 992px) {
-    font-size: ${({ theme }) => (theme === 'light' ? `22px` : `20px`)};
+    font-size: ${({ theme }) => (theme === 'light' ? `22px` : `18px`)};
     width: 90%;
     text-align: center;
   }
@@ -160,7 +161,7 @@ function Accueil() {
           est prévue très prochainement...
           <br /> Entourée & accompagnée par de réels pointures au quotidien,
           cette expérience m'a permise d'enrichir mes compétences ainsi 
-          que mes connaissances en <Mark theme={theme}>développement d'application IOS & Android </Mark>
+          que mes connaissances en développement d'application <Mark theme={theme}>IOS & Android </Mark>
           notamment en <Mark theme={theme}>React Native et Typescript</Mark> coté Front-end 
           mais aussi au developpement d'une API sécurisée en <Mark theme={theme}>Python flaskr</Mark> coté Back-end.
           <br />
