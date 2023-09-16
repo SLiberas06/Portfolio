@@ -75,28 +75,28 @@ const HomeSubtitle = styled.h2`
   }
 `
 const React = styled(FaReact)`
-  font-size: 25px;
+  font-size: 22px;
   border-radius: 50px;
   padding: 1px;
   background-color: ${Color.backgroundDark};
   color: #00d8ff;
 `
 const NodeJs = styled(FaNodeJs)`
-  font-size: 25px;
+  font-size: 22px;
   border-radius: 50px;
   padding: 1px;
   background-color: ${Color.backgroundDark};
   color: #509941;
 `
 const HomeTexte = styled.p`
-  font-size: 25px;
+  font-size: 22px;
   width: 100%;
   color: ${({ theme }) =>
     theme === 'light' ? Color.primaryLightText : Color.backgroundLight};
   @media (min-width: 992px) {
-    font-size: ${({ theme }) => (theme === 'light' ? `25px` : `20px`)};
+    font-size: ${({ theme }) => (theme === 'light' ? `22px` : `20px`)};
     width: 90%;
-    text-align: justify;
+    text-align: center;
   }
 `
 const TextTitle = styled.h2`
@@ -162,12 +162,11 @@ function Accueil() {
           cette expérience m'a permise d'enrichir mes compétences ainsi 
           que mes connaissances en <Mark theme={theme}>développement d'application IOS & Android </Mark>
           notamment en <Mark theme={theme}>React Native et Typescript</Mark> coté Front-end 
-          mais aussi au developpement <Mark theme={theme}>d'une API sécurisée en Python flaskr</Mark> coté Back-end.
+          mais aussi au developpement d'une API sécurisée en <Mark theme={theme}>Python flaskr</Mark> coté Back-end.
           <br />
           En parallèle du developpement de cette application, j'ai passé une formation  <Mark theme={theme}>SCRUM Master</Mark>, 
           obtenu ma certification & 
           eu l'occasion d'appliquer mes nouvelles compétences en <Mark theme={theme}>méthodes Agiles</Mark> pour la réalisation de ce projet.
-          Je vous mets à disposition mes projets, mes certification & mon CV.
             <br />
           Je suis<Mark theme={theme}> spécialisée</Mark> en ReactJS & React Native <React /> côté
           front-end mais aussi en Node
