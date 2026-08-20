@@ -344,8 +344,8 @@ const COPY = {
       ],
     },
     contact: {
-      title: "Le plus rapide, c'est de me décrire votre idée ou d'en discuter.",
-      text: "Racontez moi ce que vous voulez construire, ou parlons en simplement. Je vous réponds franchement si je suis la bonne personne pour ça.",
+      title: "Le plus rapide, c'est de me décrire votre idée et d'en discuter.",
+      text: "Racontez moi ce que vous voulez construire, parlons en simplement.",
       email: "E-mail",
       linkedin: "LinkedIn",
       phone: "Téléphone",
