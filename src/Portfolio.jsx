@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 
 const EMAIL = "sabrina.liberas@gmail.com";
-const PHONE = "06 44 00 58 64";
+// const PHONE = "06 44 00 58 64";
 const LINKEDIN = "https://linkedin.com/in/sabrina-liberas-836083198";
 
 /*  Le formulaire poste ici. FormSubmit envoie le message sur la boîte Gmail
@@ -179,7 +179,7 @@ const COPY = {
       text: "Tell me what you want to build, or just talk it through with me. I will tell you straight whether I am the right person for it.",
       email: "Email",
       linkedin: "LinkedIn",
-      phone: "Phone",
+    //   phone: "Phone",
       form: {
         label: "Write to me",
         name: "Your name",
@@ -348,7 +348,7 @@ const COPY = {
       text: "Racontez moi ce que vous voulez construire, parlons en simplement.",
       email: "E-mail",
       linkedin: "LinkedIn",
-      phone: "Téléphone",
+    //   phone: "Téléphone",
       form: {
         label: "Écrivez moi",
         name: "Votre nom",
@@ -370,7 +370,9 @@ const COPY = {
 /* ================================================================== */
 
 const css = `
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Public+Sans:wght@300;400;500&display=swap');
+/* Les polices sont chargees dans index.html via <link rel="stylesheet">.
+   Un @import ici ne demarrerait qu'au montage du composant et provoquerait
+   un flash de page non stylee. */
 
 /*  PALETTE
     Accent actif : vert. Pour changer d'accent, remplacer --accent,
@@ -988,10 +990,10 @@ export default function Portfolio() {
                   <span className="sl-label">{t.contact.linkedin}</span>
                   <span>sabrina-liberas</span>
                 </a>
-                <a className="sl-line" href={`tel:${PHONE.replace(/\s/g, "")}`}>
+                {/* <a className="sl-line" href={`tel:${PHONE.replace(/\s/g, "")}`}>
                   <span className="sl-label">{t.contact.phone}</span>
                   <span>{PHONE}</span>
-                </a>
+                </a> */}
               </div>
             </div>
             <div className="sl-fade">
